@@ -267,7 +267,7 @@ class ShowDetailsScreen extends StatelessWidget {
                         flex: 1,
                         child: Container(
                           padding: const EdgeInsets.all(8),
-                          color: Colors.white10,
+                          color: Colors.white,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
