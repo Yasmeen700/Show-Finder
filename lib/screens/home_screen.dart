@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: AppColors.blackColor,
+        backgroundColor: AppColors.darkColor,
         appBar: AppBar(
           title: const Text('Show Finder'),
         ),

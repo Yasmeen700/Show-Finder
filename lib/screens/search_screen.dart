@@ -6,6 +6,7 @@ import 'package:m2_test/constants/app_colors.dart';
 import 'package:m2_test/controllers/app_controller.dart';
 import 'package:m2_test/controllers/search_controller.dart';
 import 'package:m2_test/screens/show_details_screen.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../models/search_for_shows_model.dart';
 
 class SearchScreen extends StatelessWidget {
@@ -16,7 +17,7 @@ class SearchScreen extends StatelessWidget {
     final SearchController searchController = Get.put(SearchController());
     return SafeArea(
       child: Scaffold(
-        backgroundColor: AppColors.blackColor,
+        backgroundColor: AppColors.darkColor,
         appBar: AppBar(
           title: Text(Get.arguments),
         ),
@@ -32,7 +33,7 @@ class SearchScreen extends StatelessWidget {
                   showNoMoreItemsIndicatorAsGridChild: false,
                   pagingController: searchController.pagingController,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    childAspectRatio: 100 / 150,
+                    childAspectRatio: .47,
                     crossAxisCount: 2,
                   ),
                   builderDelegate: PagedChildBuilderDelegate<Search>(
@@ -101,9 +102,12 @@ class ShowCard extends StatelessWidget {
                     ? searchResultShow.poster ?? ''
                     : 'https://cdn-icons-png.flaticon.com/512/686/686461.png',
                 width: Get.width,
-                height: Get.width * 0.5,
+                height: Get.width * 0.6,
                 fit: BoxFit.fill,
               ),
+            ),
+            const SizedBox(
+              height: 8,
             ),
             Text(
               searchResultShow.title ?? '',
@@ -115,7 +119,7 @@ class ShowCard extends StatelessWidget {
               maxLines: 2,
             ),
             const SizedBox(
-              height: 4,
+              height: 8,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -124,15 +128,35 @@ class ShowCard extends StatelessWidget {
                   searchResultShow.type ?? '',
                   style: const TextStyle(
                     color: Colors.white,
-                    fontSize: 13,
+                    fontSize: 16,
                   ),
                 ),
                 Text(
                   searchResultShow.year ?? '',
-                  style: const TextStyle(color: Colors.white, fontSize: 13),
+                  style: const TextStyle(color: Colors.white, fontSize: 16),
                 ),
               ],
             ),
+            const SizedBox(
+              height: 8,
+            ),
+            GestureDetector(
+              onTap: () async {
+                await launchUrl(
+                  Uri.parse(
+                      "https://www.imdb.com/title/${searchResultShow.imdbID}/"),
+                );
+              },
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: const [
+                  Text('IMBD',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16,color: AppColors.primaryColor),),
+                  Icon(Icons.arrow_forward_ios,size: 16,color: AppColors.primaryColor,),
+                ],
+              ),
+            ),
+
           ],
         ),
       ),

@@ -12,7 +12,7 @@ class ShowDetailsScreen extends StatelessWidget {
     final _scrollController = ScrollController();
     return SafeArea(
       child: Scaffold(
-        backgroundColor: AppColors.blackColor,
+        backgroundColor: AppColors.darkColor,
         body: CustomScrollView(
           controller: _scrollController,
           slivers: [
@@ -34,13 +34,16 @@ class ShowDetailsScreen extends StatelessWidget {
             SliverList(
               delegate: SliverChildListDelegate.fixed(
                 [
+                  const SizedBox(
+                    height: 16,
+                  ),
                   Text(
                     appController.showDetails.value.plot ?? '',
                     style: const TextStyle(
                         fontSize: 16.0, color: Colors.white, letterSpacing: 1),
                   ),
                   const SizedBox(
-                    height: 8,
+                    height: 16,
                   ),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -64,7 +67,7 @@ class ShowDetailsScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                    height: 8,
+                    height: 16,
                   ),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -88,7 +91,7 @@ class ShowDetailsScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                    height: 8,
+                    height: 16,
                   ),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -112,7 +115,7 @@ class ShowDetailsScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                    height: 8,
+                    height: 16,
                   ),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -136,7 +139,103 @@ class ShowDetailsScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(
-                    height: 8,
+                    height: 16,
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Released Year: ',
+                        style: TextStyle(
+                          color: AppColors.primaryColor,
+                          fontSize: 16.0,
+                        ),
+                      ),
+                      Expanded(
+                        child: Text(
+                          appController.showDetails.value.released ?? '',
+                          style: const TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Runtime: ',
+                        style: TextStyle(
+                          color: AppColors.primaryColor,
+                          fontSize: 16.0,
+                        ),
+                      ),
+                      Expanded(
+                        child: Text(
+                          appController.showDetails.value.runtime ?? '',
+                          style: const TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Language: ',
+                        style: TextStyle(
+                          color: AppColors.primaryColor,
+                          fontSize: 16.0,
+                        ),
+                      ),
+                      Expanded(
+                        child: Text(
+                          appController.showDetails.value.language ?? '',
+                          style: const TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        'Country: ',
+                        style: TextStyle(
+                          color: AppColors.primaryColor,
+                          fontSize: 16.0,
+                        ),
+                      ),
+                      Expanded(
+                        child: Text(
+                          appController.showDetails.value.country ?? '',
+                          style: const TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 16,
                   ),
                   Row(
                     children: [
@@ -144,7 +243,7 @@ class ShowDetailsScreen extends StatelessWidget {
                         flex: 1,
                         child: Container(
                           padding: const EdgeInsets.all(8),
-                          color: Colors.white10,
+                          color: Colors.white,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
@@ -162,7 +261,7 @@ class ShowDetailsScreen extends StatelessWidget {
                       ),
                       const Text(
                         '|',
-                        style: TextStyle(color: AppColors.blackColor),
+                        style: TextStyle(color: AppColors.darkColor),
                       ),
                       Expanded(
                         flex: 1,
@@ -291,104 +390,8 @@ class ShowDetailsScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  const SizedBox(
-                    height: 8,
-                  ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Released Year: ',
-                        style: TextStyle(
-                          color: AppColors.primaryColor,
-                          fontSize: 16.0,
-                        ),
-                      ),
-                      Expanded(
-                        child: Text(
-                          appController.showDetails.value.released ?? '',
-                          style: const TextStyle(
-                            fontSize: 16.0,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 8,
-                  ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Runtime: ',
-                        style: TextStyle(
-                          color: AppColors.primaryColor,
-                          fontSize: 16.0,
-                        ),
-                      ),
-                      Expanded(
-                        child: Text(
-                          appController.showDetails.value.runtime ?? '',
-                          style: const TextStyle(
-                            fontSize: 16.0,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 8,
-                  ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Language: ',
-                        style: TextStyle(
-                          color: AppColors.primaryColor,
-                          fontSize: 16.0,
-                        ),
-                      ),
-                      Expanded(
-                        child: Text(
-                          appController.showDetails.value.language ?? '',
-                          style: const TextStyle(
-                            fontSize: 16.0,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 8,
-                  ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Country: ',
-                        style: TextStyle(
-                          color: AppColors.primaryColor,
-                          fontSize: 16.0,
-                        ),
-                      ),
-                      Expanded(
-                        child: Text(
-                          appController.showDetails.value.country ?? '',
-                          style: const TextStyle(
-                            fontSize: 16.0,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 8,
+                  SizedBox(
+                    height: Get.width,
                   ),
                 ],
               ),

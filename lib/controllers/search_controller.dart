@@ -1,10 +1,7 @@
 import 'dart:convert';
-import 'dart:developer';
-
 import 'package:get/get.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:m2_test/controllers/app_controller.dart';
-
 import '../constants/end_point.dart';
 import '../models/search_for_shows_model.dart';
 import '../utils/data.dart';
@@ -38,7 +35,6 @@ class SearchController extends GetxController {
         final nextPageKey = pageKey + 1;
         pagingController.appendPage(searchResult, nextPageKey);
       }
-      log(searchResult[0].title.toString());
       return futureSearchResult.value;
     } catch (e) {
       print(e);
@@ -56,7 +52,6 @@ class SearchController extends GetxController {
         : '';
     var url =
         '${Constant.searchForMovie}$addTitle$addYear$addShowType&page=$pagenumber';
-    log(url);
     return url;
   }
 }
