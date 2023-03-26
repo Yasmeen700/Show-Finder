@@ -102,7 +102,7 @@ class ShowCard extends StatelessWidget {
                     ? searchResultShow.poster ?? ''
                     : 'https://cdn-icons-png.flaticon.com/512/686/686461.png',
                 width: Get.width,
-                height: Get.width * 0.6,
+                height: Get.width * 0.7,
                 fit: BoxFit.fill,
               ),
             ),

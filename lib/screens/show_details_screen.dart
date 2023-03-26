@@ -37,256 +37,286 @@ class ShowDetailsScreen extends StatelessWidget {
                   const SizedBox(
                     height: 16,
                   ),
-                  Text(
+                  Padding(padding: const EdgeInsets.symmetric(horizontal: 8),
+                  child:  Text(
                     appController.showDetails.value.plot ?? '',
                     style: const TextStyle(
                         fontSize: 16.0, color: Colors.white, letterSpacing: 1),
                   ),
+                  ),
                   const SizedBox(
                     height: 16,
                   ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Writer: ',
-                        style: TextStyle(
-                          color: AppColors.primaryColor,
-                          fontSize: 16.0,
-                        ),
-                      ),
-                      Expanded(
-                        child: Text(
-                          appController.showDetails.value.writer ?? '',
-                          style: const TextStyle(
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Writer: ',
+                          style: TextStyle(
+                            color: AppColors.primaryColor,
                             fontSize: 16.0,
-                            color: Colors.white,
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 16,
-                  ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Actors: ',
-                        style: TextStyle(
-                          color: AppColors.primaryColor,
-                          fontSize: 16.0,
-                        ),
-                      ),
-                      Expanded(
-                        child: Text(
-                          appController.showDetails.value.actors ?? '',
-                          style: const TextStyle(
-                            fontSize: 16.0,
-                            color: Colors.white,
+                        Expanded(
+                          child: Text(
+                            appController.showDetails.value.writer ?? '',
+                            style: const TextStyle(
+                              fontSize: 16.0,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   const SizedBox(
                     height: 16,
                   ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Director: ',
-                        style: TextStyle(
-                          color: AppColors.primaryColor,
-                          fontSize: 16.0,
-                        ),
-                      ),
-                      Expanded(
-                        child: Text(
-                          appController.showDetails.value.director ?? '',
-                          style: const TextStyle(
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Actors: ',
+                          style: TextStyle(
+                            color: AppColors.primaryColor,
                             fontSize: 16.0,
-                            color: Colors.white,
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 16,
-                  ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Awards: ',
-                        style: TextStyle(
-                          color: AppColors.primaryColor,
-                          fontSize: 16.0,
-                        ),
-                      ),
-                      Expanded(
-                        child: Text(
-                          appController.showDetails.value.awards ?? '',
-                          style: const TextStyle(
-                            fontSize: 16.0,
-                            color: Colors.white,
+                        Expanded(
+                          child: Text(
+                            appController.showDetails.value.actors ?? '',
+                            style: const TextStyle(
+                              fontSize: 16.0,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   const SizedBox(
                     height: 16,
                   ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Released Year: ',
-                        style: TextStyle(
-                          color: AppColors.primaryColor,
-                          fontSize: 16.0,
-                        ),
-                      ),
-                      Expanded(
-                        child: Text(
-                          appController.showDetails.value.released ?? '',
-                          style: const TextStyle(
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Director: ',
+                          style: TextStyle(
+                            color: AppColors.primaryColor,
                             fontSize: 16.0,
-                            color: Colors.white,
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 16,
-                  ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Runtime: ',
-                        style: TextStyle(
-                          color: AppColors.primaryColor,
-                          fontSize: 16.0,
-                        ),
-                      ),
-                      Expanded(
-                        child: Text(
-                          appController.showDetails.value.runtime ?? '',
-                          style: const TextStyle(
-                            fontSize: 16.0,
-                            color: Colors.white,
+                        Expanded(
+                          child: Text(
+                            appController.showDetails.value.director ?? '',
+                            style: const TextStyle(
+                              fontSize: 16.0,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   const SizedBox(
                     height: 16,
                   ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Language: ',
-                        style: TextStyle(
-                          color: AppColors.primaryColor,
-                          fontSize: 16.0,
-                        ),
-                      ),
-                      Expanded(
-                        child: Text(
-                          appController.showDetails.value.language ?? '',
-                          style: const TextStyle(
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Awards: ',
+                          style: TextStyle(
+                            color: AppColors.primaryColor,
                             fontSize: 16.0,
-                            color: Colors.white,
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 16,
-                  ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'Country: ',
-                        style: TextStyle(
-                          color: AppColors.primaryColor,
-                          fontSize: 16.0,
-                        ),
-                      ),
-                      Expanded(
-                        child: Text(
-                          appController.showDetails.value.country ?? '',
-                          style: const TextStyle(
-                            fontSize: 16.0,
-                            color: Colors.white,
+                        Expanded(
+                          child: Text(
+                            appController.showDetails.value.awards ?? '',
+                            style: const TextStyle(
+                              fontSize: 16.0,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   const SizedBox(
                     height: 16,
                   ),
-                  Row(
-                    children: [
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          color: Colors.white,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text(
-                                'Source',
-                                style: TextStyle(
-                                  fontSize: 16.0,
-                                  color: AppColors.primaryColor,
-                                  fontWeight: FontWeight.bold,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Released Year: ',
+                          style: TextStyle(
+                            color: AppColors.primaryColor,
+                            fontSize: 16.0,
+                          ),
+                        ),
+                        Expanded(
+                          child: Text(
+                            appController.showDetails.value.released ?? '',
+                            style: const TextStyle(
+                              fontSize: 16.0,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Runtime: ',
+                          style: TextStyle(
+                            color: AppColors.primaryColor,
+                            fontSize: 16.0,
+                          ),
+                        ),
+                        Expanded(
+                          child: Text(
+                            appController.showDetails.value.runtime ?? '',
+                            style: const TextStyle(
+                              fontSize: 16.0,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Language: ',
+                          style: TextStyle(
+                            color: AppColors.primaryColor,
+                            fontSize: 16.0,
+                          ),
+                        ),
+                        Expanded(
+                          child: Text(
+                            appController.showDetails.value.language ?? '',
+                            style: const TextStyle(
+                              fontSize: 16.0,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Country: ',
+                          style: TextStyle(
+                            color: AppColors.primaryColor,
+                            fontSize: 16.0,
+                          ),
+                        ),
+                        Expanded(
+                          child: Text(
+                            appController.showDetails.value.country ?? '',
+                            style: const TextStyle(
+                              fontSize: 16.0,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          flex: 1,
+                          child: Container(
+                            padding: const EdgeInsets.all(8),
+                            color: Colors.white,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Text(
+                                  'Source',
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                    color: AppColors.primaryColor,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                      const Text(
-                        '|',
-                        style: TextStyle(color: AppColors.darkColor),
-                      ),
-                      Expanded(
-                        flex: 1,
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          color: Colors.white,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text(
-                                'Value',
-                                style: TextStyle(
-                                  fontSize: 16.0,
-                                  color: AppColors.primaryColor,
-                                  fontWeight: FontWeight.bold,
+                        const Text(
+                          '|',
+                          style: TextStyle(color: AppColors.darkColor),
+                        ),
+                        Expanded(
+                          flex: 1,
+                          child: Container(
+                            padding: const EdgeInsets.all(8),
+                            color: Colors.white,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const [
+                                Text(
+                                  'Value',
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                    color: AppColors.primaryColor,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   if (appController.showDetails.value.ratings != null)
                     ListView.builder(
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
                       physics: const NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
                       itemCount:
@@ -344,51 +374,54 @@ class ShowDetailsScreen extends StatelessWidget {
                         );
                       },
                     ),
-                  Column(
-                    children: [
-                      Row(
-                        children: [
-                          Expanded(
-                            flex: 1,
-                            child: Container(
-                              padding: const EdgeInsets.all(8),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: const [
-                                  Text(
-                                    'IMBD',
-                                    style: TextStyle(
-                                      fontSize: 14.0,
-                                      color: AppColors.primaryColor,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: Container(
+                                padding: const EdgeInsets.all(8),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: const [
+                                    Text(
+                                      'IMBD',
+                                      style: TextStyle(
+                                        fontSize: 14.0,
+                                        color: AppColors.primaryColor,
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                          Expanded(
-                            flex: 1,
-                            child: Container(
-                              padding: const EdgeInsets.all(8),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    appController
-                                            .showDetails.value.imdbRating ??
-                                        '',
-                                    style: const TextStyle(
-                                      fontSize: 14.0,
-                                      color: Colors.white,
+                            Expanded(
+                              flex: 1,
+                              child: Container(
+                                padding: const EdgeInsets.all(8),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      appController
+                                              .showDetails.value.imdbRating ??
+                                          '',
+                                      style: const TextStyle(
+                                        fontSize: 14.0,
+                                        color: Colors.white,
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                        ],
-                      )
-                    ],
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: Get.width,
